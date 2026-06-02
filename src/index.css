@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Dancing Script", cursive;
+  
+  --color-orange: #f26522;
+  --color-brand-orange: #f26522;
+  --color-luxury-black: #000000;
+  --color-elevated-black: #0a0a0a;
+  --color-rich-dark-gray: #050505;
+  --color-border-gray: #1f2937;
+  --color-text-gray: #9ca3af;
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-white selection:bg-orange selection:text-white overflow-x-hidden;
+    font-family: inherit;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(242, 101, 34, 0.4);
+  }
+  
+  .glass-card {
+    @apply bg-elevated-black/60 backdrop-blur-xl border border-border-gray;
+  }
+  
+  .orange-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#f26522] via-[#ff8c52] to-[#f26522];
+  }
+
+  .cinematic-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+  }
+}
