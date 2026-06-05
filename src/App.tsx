@@ -16,6 +16,7 @@ import Meditation from "./components/Meditation";
 import ImagineSection from "./components/ImagineSection";
 import TargetAudience from "./components/TargetAudience";
 import WarningSection from "./components/WarningSection";
+import BookingFormSection from "./components/BookingFormSection";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Booking from "./components/Booking";
@@ -23,6 +24,7 @@ import Support from "./components/Support";
 import BrandingFooter from "./components/BrandingFooter";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
+import PopupForm from "./components/PopupForm";
 import { motion, useScroll, useSpring } from "motion/react";
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
   return (
     <main className="relative bg-luxury-black font-sans selection:bg-orange selection:text-white">
       <LoadingScreen />
+      <PopupForm />
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-orange z-[60] origin-left shadow-[0_0_15px_rgba(242,101,34,0.5)]"
@@ -63,6 +66,7 @@ export default function App() {
         <ImagineSection />
         <TargetAudience />
         <WarningSection />
+        <BookingFormSection />
         <Testimonials />
         <FAQ />
         <Booking />

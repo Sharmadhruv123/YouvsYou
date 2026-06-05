@@ -123,6 +123,7 @@ export default function Hero() {
           className="flex flex-col md:flex-row items-center justify-center gap-6"
         >
           <motion.button
+            onClick={() => window.dispatchEvent(new Event('open-booking-popup'))}
             whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(242, 101, 34, 0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-5 bg-orange text-white font-black uppercase tracking-widest rounded-full flex items-center shadow-2xl transition-all"
@@ -130,14 +131,14 @@ export default function Hero() {
             JOIN THE JOURNEY
           </motion.button>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-5 border border-border-gray text-white font-black uppercase tracking-widest rounded-full flex items-center transition-all"
           >
             <Play className="mr-3 fill-current text-orange" size={18} />
             WATCH THE FILM
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
 

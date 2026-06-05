@@ -74,6 +74,7 @@ export default function Impact() {
           </p>
 
           <motion.button
+            onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })}
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(242, 101, 34, 0.2)" }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-4 bg-orange text-white font-black uppercase tracking-widest rounded-full shadow-2xl transition-all"

@@ -66,6 +66,7 @@ export default function Booking() {
 
             <div className="flex flex-col md:flex-row items-center gap-8 w-full md:w-auto">
               <motion.button
+                onClick={() => window.dispatchEvent(new Event('open-booking-popup'))}
                 whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(242, 101, 34, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full md:w-auto px-16 py-6 bg-orange text-white font-black uppercase tracking-[0.3em] rounded-full flex items-center justify-center group text-sm"

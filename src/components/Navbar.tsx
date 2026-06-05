@@ -33,15 +33,15 @@ export default function Navbar() {
             {item}
           </motion.a>
         ))}
-        <motion.a
-          href="#booking"
+        <motion.button
+          onClick={() => window.dispatchEvent(new Event('open-booking-popup'))}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}
           className="px-6 py-2 bg-orange/10 border border-orange/50 text-orange text-xs uppercase tracking-widest rounded-sm hover:bg-orange hover:text-white transition-all font-bold inline-block"
         >
           Book Now
-        </motion.a>
+        </motion.button>
       </div>
 
       <div className="md:hidden">
@@ -67,13 +67,15 @@ export default function Navbar() {
               {item}
             </a>
           ))}
-          <a
-            href="#booking"
-            onClick={() => setIsOpen(false)}
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              window.dispatchEvent(new Event('open-booking-popup'));
+            }}
             className="w-full py-4 bg-orange text-white font-bold uppercase tracking-widest rounded-full text-center inline-block"
           >
             Book Experience
-          </a>
+          </button>
         </motion.div>
       )}
     </nav>

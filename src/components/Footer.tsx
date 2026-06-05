@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-import { useState } from 'react';
+import React, { useState } from 'react';
 import LegalModal from './LegalModal';
 import { TermsContent, PrivacyContent, TermsOfServiceContent } from './LegalContent';
 import { Instagram, Twitter, Youtube, Facebook, Linkedin } from 'lucide-react';
